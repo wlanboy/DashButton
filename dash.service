@@ -1,0 +1,12 @@
+[Unit]
+Description=Amazon Dash Service /lib/systemd/system/dash.service
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/usr/bin/python /dash/dash.py > /dash/dash.log 2>&1
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
