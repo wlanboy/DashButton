@@ -54,7 +54,7 @@ def udp_filter(pkt):
                 break
 
 # Add MAC address in lowercase!
-mac_to_action = {'ac:63:be:90:79:45' : button_pressed_dash_oral, '11:11:11:11:11:11' : button_pressed_dash_nivea, '11:11:11:11:11:11' : button_pressed_dash_nerf} 
+mac_to_action = {'11:11:11:11:11:11' : button_pressed_dash_oral, '22:22:22:22:22:22' : button_pressed_dash_nivea, '33:33:33:33:33:33' : button_pressed_dash_nerf} 
 
 mac_id_list = list(mac_to_action.keys())
 sniff(prn=udp_filter, store=0, filter="udp", lfilter=lambda d: d.src in mac_id_list)
